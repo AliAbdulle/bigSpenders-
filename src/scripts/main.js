@@ -5,7 +5,7 @@ const bigSpenders = businesses.filter(business => {
   let bigSpenders = true
   business.orders.forEach(order => {
     if (order > 9000) {
-      bigSpenders = true
+      bigSpenders = false
     }
   })
 
@@ -13,7 +13,6 @@ const bigSpenders = businesses.filter(business => {
 })
 
 console.log(bigSpenders)
-
 bigSpenders.forEach(business => {
   outEl.innerHTML += `
     <h2>${business.companyName}</h2>
