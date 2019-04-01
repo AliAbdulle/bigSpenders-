@@ -2,10 +2,10 @@ const outEl = document.querySelector("#output");
 // Array to contain all the big spenders
 const bigSpenders = businesses.filter(business => {
   //console.log(business.orders)
-  let bigSpenders = true
+  let bigSpenders = false
   business.orders.forEach(order => {
     if (order > 9000) {
-      bigSpenders = false
+      bigSpenders = true
     }
   })
 
